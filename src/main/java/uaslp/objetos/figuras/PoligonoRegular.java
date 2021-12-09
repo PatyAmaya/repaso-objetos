@@ -1,6 +1,6 @@
 package uaslp.objetos.figuras;
 
-public class PoligonoRegular{
+public class PoligonoRegular implements Figura, DrawableItem{
     private double lado;
     private int numeroDeLados;
 
@@ -28,5 +28,10 @@ public class PoligonoRegular{
         double apotema=(lado/2)/tangente;
 
         return (perimetro*apotema)/2;
+    }
+
+    @Override
+    public String getName() {
+        return "Poligono Regular";
     }
 }

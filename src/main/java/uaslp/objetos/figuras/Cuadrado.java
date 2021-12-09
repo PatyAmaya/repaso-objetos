@@ -1,6 +1,6 @@
 package uaslp.objetos.figuras;
 
-public class Cuadrado {
+public class Cuadrado implements Figura, DrawableItem{
     private double lado;
 
     public Cuadrado(){
@@ -21,5 +21,10 @@ public class Cuadrado {
 
     public double getArea(){
         return lado*lado;
+    }
+
+    @Override
+    public String getName() {
+        return "Cuadrado";
     }
 }
