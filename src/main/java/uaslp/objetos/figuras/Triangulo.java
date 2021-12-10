@@ -28,7 +28,13 @@ public class Triangulo implements Figura, DrawableItem{
         return altura;
     }
 
-    public double getArea(){
+    public double getArea() throws BaseNoProvistaException{
+        if(base==0.0){
+            throw new BaseNoProvistaException();
+        }
+        if(altura==0.0){
+            throw new AlturaNoProvistaException();
+        }
         return (base*altura)/2;
     }
 

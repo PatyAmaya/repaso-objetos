@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Exercise3 {
-    // CREA LAS CLASES Y METODOS NECESARIOS PARA QUE EL TEST SE EJECUTE CORRECTAMENTE
+    // CREA LAS CLASES Y MÉTODOS NECESARIOS PARA QUE EL TEST SE EJECUTE CORRECTAMENTE
 
-    // EVITA USAR LOS ATAJOS DEL IDE PARA CREAR CLASES, METODOS Y VARIABLES
+    // EVITA USAR LOS ATAJOS DEL IDE PARA CREAR CLASES, MÉTODOS Y VARIABLES
 
     // NO DEBES MODIFICAR PARA NADA ESTA CLASE
 
@@ -52,7 +52,7 @@ public class Exercise3 {
     public void testPoligono() {
 
         // Then:
-        Exception ex = assertThrows(NumeroInvalidoDeLados.class, () -> new PoligonoRegular(3));
+        Exception ex = assertThrows(NumeroInvalidoDeLadosException.class, () -> new PoligonoRegular(3));
 
         assertFalse(ex instanceof DatoFaltanteException);
         assertEquals("Número de lados válido a partir de 5", ex.getMessage());

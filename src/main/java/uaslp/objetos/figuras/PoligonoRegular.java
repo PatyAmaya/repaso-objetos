@@ -4,7 +4,10 @@ public class PoligonoRegular implements Figura, DrawableItem{
     private double lado;
     private int numeroDeLados;
 
-    public PoligonoRegular(int numeroDeLados){
+    public PoligonoRegular(int numeroDeLados) throws NumeroInvalidoDeLadosException{
+        if(numeroDeLados<5){
+            throw new NumeroInvalidoDeLadosException("Número de lados válido a partir de 5");
+        }
         this.numeroDeLados=numeroDeLados;
     }
 
@@ -21,7 +24,8 @@ public class PoligonoRegular implements Figura, DrawableItem{
         return lado;
     }
 
-    public double getArea(){
+    public double getArea()  {
+
         double perimetro = lado*numeroDeLados;
         double anguloCentral =360.0/numeroDeLados;
         double tangente=Math.tan(Math.toRadians(anguloCentral)/2);

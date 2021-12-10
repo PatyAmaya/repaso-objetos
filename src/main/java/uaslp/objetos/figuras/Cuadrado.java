@@ -19,7 +19,10 @@ public class Cuadrado implements Figura, DrawableItem{
         return lado;
     }
 
-    public double getArea(){
+    public double getArea() throws LadoNoProvistoException {
+        if(lado==0.0){
+            throw new LadoNoProvistoException();
+        }
         return lado*lado;
     }
 
