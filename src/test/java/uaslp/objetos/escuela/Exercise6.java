@@ -1,5 +1,6 @@
 package uaslp.objetos.escuela;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -25,4 +26,5 @@ public class Exercise6 {
         assertThat(Dependencia2.class).isInterface();
         assertThat(Dependencia3.class).isInterface();
     }
+
 }
